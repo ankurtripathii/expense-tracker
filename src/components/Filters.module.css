@@ -1,0 +1,138 @@
+.container {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.searchWrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  padding: 0.5rem 2rem 0.5rem 2.125rem;
+  transition: border-color 0.15s;
+}
+.searchInput:focus { border-color: var(--border-focus); }
+.searchInput::placeholder { color: var(--text-muted); }
+
+.clearSearch {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 11px;
+  padding: 2px 4px;
+  cursor: pointer;
+}
+.clearSearch:hover { color: var(--text-primary); }
+
+.resetBtn {
+  background: var(--red-dim);
+  border: 1px solid var(--red);
+  border-radius: var(--radius-sm);
+  color: var(--red);
+  padding: 0.4rem 0.875rem;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+.resetBtn:hover { background: rgba(239,68,68,0.2); }
+
+.filterRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.filterGroup { display: flex; flex-direction: column; gap: 6px; }
+
+.filterLabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.catChips {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  color: var(--text-secondary);
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.chip:hover { background: var(--bg-surface); border-color: var(--text-muted); }
+.chipActive { background: var(--accent-dim); border-color: var(--accent); color: var(--accent-light); }
+
+.dateRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dateInput {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  padding: 0.4rem 0.625rem;
+  font-size: 12px;
+  transition: border-color 0.15s;
+}
+.dateInput:focus { border-color: var(--border-focus); }
+.dateInput::-webkit-calendar-picker-indicator { filter: invert(0.5); }
+
+.dateSep { color: var(--text-muted); font-size: 12px; }
+
+.toggleLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}

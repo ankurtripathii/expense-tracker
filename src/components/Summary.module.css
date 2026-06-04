@@ -1,0 +1,117 @@
+.container { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.statCard {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  padding: 0.875rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statLabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.statValue {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.green { color: var(--green); }
+.amber { color: var(--amber); }
+
+.section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sectionTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.badge {
+  background: var(--accent-dim);
+  color: var(--accent-light);
+  border-radius: 99px;
+  padding: 2px 10px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.chart { margin: 0 -4px; }
+
+.catList { display: flex; flex-direction: column; gap: 10px; }
+
+.catRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.catIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.catInfo { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+
+.catMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catName { font-size: 13px; font-weight: 500; color: var(--text-primary); }
+.catAmount { font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary); }
+
+.barTrack {
+  height: 4px;
+  background: var(--bg-surface);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+.catPct {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
